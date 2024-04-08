@@ -11,13 +11,13 @@ public class ContactDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer contactId;
 
-
     private String name;
 
-    @Column(unique = true) 
+    @Column(unique = true)
+    private String phone;
 
-
-    public ContactDetails(){}
+    public ContactDetails() {
+    }
 
     public Integer getContactId() {
         return contactId;
