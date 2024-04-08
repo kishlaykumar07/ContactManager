@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <span><a mat-icon-button routerLink="/">ConTACT</a></span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button (click)="openAddEditForm()">Add Contact</button>
+</mat-toolbar>
+<div class="list" align="right">
+  <button mat-raised-button color="accent" routerLink="/contact-list">
+    Contact List
+  </button>
+</div>
+
+<div class="bootstrap-wrapper">
+  <div class="container text-center mt">
+    <div mat-dialog-title>
+      <h1 class="text-center">Welcome to Contact Manager</h1>
+    </div>
+
+    <div class="col-md-6 offset-md-3">
+      <div class="container text-center">
+        <img class="img-fluid" src="/assets/contact.png" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
