@@ -14,8 +14,7 @@ public class ContactDetails {
 
     private String name;
 
-    @Column(unique = true) // Make 'phone' field unique
-    private String phone;
+    @Column(unique = true) 
 
 
     public ContactDetails(){}
