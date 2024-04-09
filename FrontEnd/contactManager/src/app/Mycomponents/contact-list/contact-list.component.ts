@@ -60,13 +60,12 @@ export class ContactListComponent implements OnInit{
   updateContact(updatedContact: Contact): void {
     this.contactService.updateContact(updatedContact).subscribe({
       next: (res: Contact) => {
-        
-        this.dataSource = this.dataSource.map(contact => {
-          if (contact.contactId === updatedContact.contactId) {
-            return updatedContact;
-          }
-          return contact;
-        });
+        // Find the index of the updated contact in the dataSource
+        const index = this.dataSource.findIndex(c => c.contactId === updatedContact.contactId);
+        if (index !== -1) {
+          // Update the contact in the dataSource
+          this.dataSource[index] = res;
+        }
       },
       error: (err: HttpErrorResponse) => {
         console.error('Error updating contact:', err);
