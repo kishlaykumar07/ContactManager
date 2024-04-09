@@ -13,7 +13,7 @@ import { ContactDialogComponent } from '../contact-dialog/contact-dialog.compone
 export class ContactListComponent implements OnInit{
 
   dataSource: Contact[] = [];
-  displayedColumns: string[] = ['contactId', 'name', 'phone', 'edit', 'delete'];
+  displayedColumns: string[] = ['contactId', 'name', 'phone', 'createdAt', 'edit', 'delete'];
 
   constructor(
     private contactService: ContactDetailService,

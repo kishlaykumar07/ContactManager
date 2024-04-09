@@ -10,14 +10,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { ContacDetailComponent } from './Mycomponents/contac-detail/contact-detail.component';
-
+import { ContacDetailComponent } from './Mycomponents/contact-detail/contact-detail.component';
+import { MatDialogActions } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactListComponent } from './Mycomponents/contact-list/contact-list.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { ContactDialogComponent } from './Mycomponents/contact-dialog/contact-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     MatTableModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    MatDialogActions,
+    MatNativeDateModule
   ],
   providers: [
     provideClientHydration(),
