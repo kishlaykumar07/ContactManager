@@ -1,8 +1,8 @@
-<div mat-dialog-title>
+<div mat-dialog-title class="title">
   <h1>Save Contacts</h1>
 </div>
 
-<div class="container">
+<div mat-dialog-content class="content">
   <div class="full-width">
     <form #contactForm="ngForm" (ngSubmit)="saveContact(contactForm)">
       <mat-form-field appearance="outline">
@@ -25,14 +25,14 @@
           [(ngModel)]="contact['name']"
           required
         />
-        <mat-error
+        <!-- <mat-error
           *ngIf="
             contactForm.controls['name'].invalid &&
             contactForm.controls['name'].touched
           "
         >
           Name is required
-        </mat-error>
+        </mat-error> -->
       </mat-form-field>
 
       <mat-form-field appearance="outline">
@@ -43,29 +43,18 @@
           name="phone"
           [(ngModel)]="contact['phone']"
           required
-          pattern="[0-9]{10}"
         />
-
-        <mat-error
-          *ngIf="
-            contactForm.controls['phone'].invalid &&
-            contactForm.controls['phone'].touched
-          "
-        >
-          Phone must be 10 digits
-        </mat-error>
-
-        <mat-error
+        <!-- <mat-error
           *ngIf="
             contactForm.controls['phone'].invalid &&
             contactForm.controls['phone'].touched
           "
         >
           Phone is required
-        </mat-error>
+        </mat-error> -->
       </mat-form-field>
 
-      <div class="button">
+      <div mat-dialog-actions class="action">
         <button mat-raised-button color="warn" (click)="clearForm(contactForm)">
           Clear
         </button>

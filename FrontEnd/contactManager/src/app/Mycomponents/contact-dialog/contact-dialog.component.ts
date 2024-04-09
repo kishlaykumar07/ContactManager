@@ -32,7 +32,8 @@ export class ContactDialogComponent {
       const updatedContact: Contact = {
         contactId: this.data.contact.contactId,
         name: this.contactForm.value.name,
-        phone: this.contactForm.value.phone
+        phone: this.contactForm.value.phone,
+        createdAt: this.contactForm.value.createdAt
       };
       this.dialogRef.close(updatedContact);
     }

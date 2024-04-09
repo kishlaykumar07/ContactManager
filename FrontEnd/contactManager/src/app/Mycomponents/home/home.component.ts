@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ContacDetailComponent } from '../contac-detail/contact-detail.component';
+import { ContacDetailComponent } from '../contact-detail/contact-detail.component';
 
 @Component({
   selector: 'app-home',

@@ -16,7 +16,8 @@ export class ContacDetailComponent implements OnInit{
   contact: Contact = {
     contactId: 0,
     name:  '',
-    phone: ''
+    phone: '',
+    createdAt: ''
   }
   constructor(
     private contactService: ContactDetailService,
@@ -51,7 +52,8 @@ export class ContacDetailComponent implements OnInit{
     this.contact = {       // Reset the contact object
       contactId: 1,
       name: '',
-      phone: ''
+      phone: '',
+      createdAt: ''
     };
   }
 }

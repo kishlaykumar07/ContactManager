@@ -10,6 +10,7 @@ export class ContactDetailService {
 
   constructor(private httpClient: HttpClient) { }
   api = "http://localhost:9090";
+  
   public saveContact(contact: Contact): Observable<Contact> {
     return this.httpClient.post<Contact>(`${this.api}/save/contact` , contact);
   }
